@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package obj.array;
+
+/**
+ *
+ * @author LENOVO
+ */
+public class Student {
+    //KO CHƠI STATIC
+    private String id;
+    public String name; //khai báo final cần phải gán value ngay từ đầu!!
+    private int yob;
+    private double gpa;
+   
+    public Student(String id, String name, int yob, double gpa){
+        this.id=id;
+        this.name=name;
+        this.yob=yob;
+        this.gpa=gpa;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getYob() {
+        return yob;
+    }
+
+    public void setYob(int yob) {
+        this.yob = yob;
+    }
+
+    public double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" + "id=" + id + ", name=" + name + ", yob=" + yob + ", gpa=" + gpa + '}';
+    }
+    
+    public void showProfile(){
+        System.out.printf("%-8s||%-25s||%-4d||%-4f", id, name, yob, gpa);
+    }
+ }
+
